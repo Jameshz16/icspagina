@@ -37,7 +37,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-5">
+    <section id="services" className="py-5" style={{ backgroundColor: 'var(--light-blue)' }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="fw-bold">Our Services</h2>

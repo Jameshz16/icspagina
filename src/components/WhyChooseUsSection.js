@@ -3,8 +3,8 @@ import React from 'react';
 
 const features = [
   {
-    title: '24/7 Emergency Service',
-    description: 'We are available around the clock to respond to your emergency needs quickly and efficiently.',
+    title: 'Licence',
+    description: 'CBC 1250136',
     icon: '🕒' // Placeholder icon
   },
   {
@@ -26,7 +26,7 @@ const features = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5" style={{ backgroundColor: 'var(--light-blue)' }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="fw-bold">Why Choose Us?</h2>

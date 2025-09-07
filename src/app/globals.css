@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #007bff; /* A standard Bootstrap blue */
+  --light-blue: #e0f2ff; /* A lighter shade for backgrounds */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +41,16 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* Fade-in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
