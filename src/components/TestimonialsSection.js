@@ -31,14 +31,11 @@ const TestimonialsSection = () => {
             <div className="col-lg-4 col-md-6 mb-4" key={index}>
               <div className="card h-100 shadow-sm border-0 rounded-lg">
                 <div className="card-body p-4">
-                  <p className="card-text text-center mb-4">\"{testimonial.quote}\"</p>
+                  <p className="card-text text-center mb-4">"{testimonial.quote}"</p>
                   {/* Render star ratings */}
                   <div className="text-center">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <i key={i} className="bi bi-star-fill text-warning"></i>
-                    ))}
-                    {[...Array(5 - testimonial.rating)].map((_, i) => (
-                      <i key={i} className="bi bi-star text-warning"></i>
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} style={{ color: 'gold', fontSize: '1.5rem' }}>★</span>
                     ))}
                   </div>
                   <footer className="blockquote-footer text-center mt-3">{testimonial.name}</footer>

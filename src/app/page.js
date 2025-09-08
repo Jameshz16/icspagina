@@ -7,11 +7,13 @@ import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 
 const HeroSection = () => {
   const heroStyle = {
-    background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://via.placeholder.com/1920x1080.png?text=Home+Repair+Service)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    background: 'linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url(/assets/openpage.jpg) no-repeat center / cover',
     color: 'white',
-    padding: '10rem 0',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundAttachment: 'fixed',
   };
 
   return (
