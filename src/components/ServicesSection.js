@@ -19,12 +19,12 @@ const services = [
   {
     title: 'Waterproofing',
     description: 'Protect your property from water damage with our expert waterproofing solutions.',
-    image: '/assets/waterproofing.jpg'
+    image: '/assets/Waterproofing.jpg'
   },
   {
     title: 'Shell Construction',
     description: 'Comprehensive shell construction services for new buildings and structures.',
-    image: '/assets/shell-construction.jpg'
+    image: '/assets/Shell-Construction.jpg'
   },
   {
     title: 'Additions',
