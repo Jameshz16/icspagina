@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
             <div className="col-lg-4 col-md-6 mb-4" key={index}>
               <div className="card h-100 shadow-sm border-0 rounded-lg">
                 <div className="card-body p-4">
-                  <p className="card-text text-center mb-4">"{testimonial.quote}"</p>
+                  <p className="card-text text-center mb-4">&quot;{testimonial.quote}&quot;</p>
                   {/* Render star ratings */}
                   <div className="text-center">
                     {[...Array(5)].map((_, i) => (
