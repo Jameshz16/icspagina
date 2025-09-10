@@ -4,33 +4,33 @@ import styles from './ServicesSection.module.css';
 
 const services = [
   {
-    title: 'General Contracting',
-    description: 'We provide full general contracting services from project start to finish.',
+    title: 'Concrete Restoration',
+    description: 'Specializing in the repair and restoration of concrete structures to their original strength and appearance.',
     image: '/assets/concrete.jpg'
   },
   {
-    title: 'Construction Management',
-    description: 'Our team can manage your project to ensure it is completed on time and on budget.',
+    title: 'Post Tension',
+    description: 'Expertise in post-tensioning systems for reinforced concrete, enhancing durability and structural performance.',
     image: '/assets/post-tencion.png'
   },
   {
-    title: 'Building Information Modeling',
-    description: 'We use BIM to create detailed 3D models of your project.',
+    title: 'Painting',
+    description: 'Professional interior and exterior painting services for commercial and residential properties.',
     image: '/assets/painting.jpg'
   },
   {
-    title: 'Design-Build',
-    description: 'Our design-build services streamline the project delivery process.',
+    title: 'Waterproofing',
+    description: 'Comprehensive waterproofing solutions to protect your building from water damage and ensure longevity.',
     image: '/assets/Waterproofing.jpg'
   },
   {
-    title: 'Pre-construction',
-    description: 'We offer pre-construction services to help you plan your project.',
+    title: 'Shell Construction',
+    description: 'Constructing the structural shell of buildings, including foundations, walls, and roofing systems.',
     image: '/assets/Shell-Construction.jpg'
   },
   {
-    title: 'Sustainability',
-    description: 'We are committed to building sustainable projects that are environmentally friendly.',
+    title: 'Additions',
+    description: 'Seamlessly constructing additions to expand your existing property with quality and precision.',
     image: '/assets/additions.jpeg'
   }
 ];
