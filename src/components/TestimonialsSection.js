@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="fw-bold">Positive Comments</h2>
-          <p className="lead text-muted">Here's what our clients have to say about us.</p>
+          <p className="lead text-muted">Here&apos;s what our clients have to say about us.</p>
         </div>
         <div className="row">
           {testimonials.map((testimonial, index) => (
