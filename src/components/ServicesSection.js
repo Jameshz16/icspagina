@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './ServicesSection.module.css';
 
 const services = [
@@ -48,7 +49,7 @@ const ServicesSection = () => {
               <div className={styles.flipCard}>
                 <div className={styles.flipCardInner}>
                   <div className={styles.flipCardFront}>
-                    <img src={service.image} alt={service.title} />
+                    <Image src={service.image} alt={service.title} width={500} height={300} />
                   </div>
                   <div className={styles.flipCardBack}>
                     <h5>{service.title}</h5>

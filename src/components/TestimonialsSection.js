@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -34,8 +35,8 @@ const TestimonialsSection = () => {
             <div className="col-lg-4 col-md-6 mb-4" key={index}>
               <div className="card h-100 text-center">
                 <div className="card-body">
-                  <img src={testimonial.image} alt={testimonial.author} className="rounded-circle mb-3" style={{width: "100px", height: "100px", objectFit: "cover"}} />
-                  <p className="card-text">"{testimonial.quote}"</p>
+                  <Image src={testimonial.image} alt={testimonial.author} width={100} height={100} className="rounded-circle mb-3" style={{objectFit: "cover"}} />
+                  <p className="card-text">&quot;{testimonial.quote}&quot;</p>
                   <footer className="blockquote-footer">{testimonial.author}, <cite title="Source Title">{testimonial.company}</cite></footer>
                 </div>
               </div>

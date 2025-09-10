@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
           {/* Column 1: Logo and Description */}
           <div className="col-md-3 mb-4">
             <Link href="/" className="d-flex align-items-center mb-3 text-white text-decoration-none">
-              <img src="/assets/logo.png" alt="Constructo Logo" style={{ height: '40px', marginRight: '10px' }} />
+              <Image src="/assets/logo.png" alt="Constructo Logo" width={40} height={40} style={{ marginRight: '10px' }} />
               <strong>Innovative Custom Services</strong>
             </Link>
             <p className="text-white">Your trusted partner for construction services.</p>

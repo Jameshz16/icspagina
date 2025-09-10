@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './ProjectsSection.module.css';
 
 const projects = [
@@ -28,7 +29,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div className="col-lg-4 col-md-6 mb-4" key={index}>
               <div className={`card h-100 text-center shadow-sm ${styles.projectCard}`}>
-                <img src={project.image} className="card-img-top" alt={project.title} style={{height: "200px", objectFit: "cover"}}/>
+                <Image src={project.image} className="card-img-top" alt={project.title} width={500} height={200} style={{objectFit: "cover"}}/>
                 <div className="card-body">
                   <h5 className="card-title fw-bold">{project.title}</h5>
                 </div>
