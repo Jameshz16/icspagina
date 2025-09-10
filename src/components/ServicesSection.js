@@ -46,15 +46,11 @@ const ServicesSection = () => {
         <div className="row">
           {services.map((service, index) => (
             <div className="col-lg-4 col-md-6 mb-4" key={index}>
-              <div className={styles.flipCard}>
-                <div className={styles.flipCardInner}>
-                  <div className={styles.flipCardFront}>
-                    <Image src={service.image} alt={service.title} width={500} height={300} />
-                  </div>
-                  <div className={styles.flipCardBack}>
-                    <h5>{service.title}</h5>
-                    <p>{service.description}</p>
-                  </div>
+              <div className={styles.serviceCard}>
+                <Image src={service.image} alt={service.title} width={500} height={300} />
+                <div className={styles.overlay}>
+                  <h5>{service.title}</h5>
+                  <p>{service.description}</p>
                 </div>
               </div>
             </div>

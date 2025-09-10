@@ -39,9 +39,11 @@ const TeamSection = () => {
         <div className="row">
           {teamMembers.map((member, index) => (
             <div className="col-lg-3 col-md-6 mb-4" key={index}>
-              <div className="card h-100 text-center shadow-sm">
-                <Image src={member.image} alt={member.name} width={150} height={150} className={"mx-auto mt-3"} style={{objectFit: "cover"}}/>
-                <div className="card-body">
+              <div className="card h-100 shadow-sm">
+                <div style={{ width: '100%', height: '250px', position: 'relative' }}>
+                  <Image src={member.image} alt={member.name} layout="fill" objectFit="cover" />
+                </div>
+                <div className="card-body text-center">
                   <h5 className="card-title fw-bold">{member.name}</h5>
                   <p className="card-text">{member.role}</p>
                   <p className="card-text small">{member.bio}</p> {/* Added biography */}
