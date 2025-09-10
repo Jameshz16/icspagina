@@ -5,11 +5,11 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div className="container">
           <Link href="/" className="navbar-brand d-flex align-items-center">
-            <img src="/assets/logo.png" alt="Company Logo" style={{ height: '40px', marginRight: '10px' }} />
-            <strong className="ms-2">Innovative custom services</strong>
+            <img src="/assets/logo.png" alt="Constructo Logo" style={{ height: '40px', marginRight: '10px' }} />
+            <strong className="ms-2">Innovative Custom Services</strong>
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -20,10 +20,13 @@ const Header = () => {
                 <Link href="/" className="nav-link">Home</Link>
               </li>
               <li className="nav-item">
+                <Link href="/about" className="nav-link">About</Link>
+              </li>
+              <li className="nav-item">
                 <Link href="/services" className="nav-link">Services</Link>
               </li>
               <li className="nav-item">
-                <Link href="/about" className="nav-link">About</Link>
+                <Link href="/projects" className="nav-link">Projects</Link>
               </li>
               <li className="nav-item">
                 <Link href="/contact" className="btn btn-primary">Contact</Link>

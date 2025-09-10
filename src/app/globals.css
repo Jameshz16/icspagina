@@ -1,7 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-blue: #007bff; /* A standard Bootstrap blue */
+  --primary-blue: #273577; /* User's requested blue */
   --light-blue: #e0f2ff; /* A lighter shade for backgrounds */
 }
 
@@ -53,4 +53,14 @@ a {
 .fade-in-section.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: #1a2556; /* A darker shade for hover */
+  border-color: #1a2556;
 }

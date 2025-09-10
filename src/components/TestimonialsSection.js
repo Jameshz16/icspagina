@@ -2,43 +2,41 @@ import React from 'react';
 
 const testimonials = [
   {
-    name: 'John Doe',
-    quote: 'Outstanding service! The team was professional and efficient. Highly recommended!',
-    rating: 5
+    quote: "This is a great company! They are very professional and do excellent work. I would highly recommend them to anyone.",
+    author: "John Doe",
+    company: "ABC Company",
+    image: "https://i.pravatar.cc/150?img=1"
   },
   {
-    name: 'Jane Smith',
-    quote: 'I was amazed by the quick response and quality of work. They truly care about their customers.',
-    rating: 5
+    quote: "I was very impressed with the quality of their work. They were on time and on budget. I would definitely use them again.",
+    author: "Jane Smith",
+    company: "XYZ Inc.",
+    image: "https://i.pravatar.cc/150?img=2"
   },
   {
-    name: 'Peter Jones',
-    quote: 'Reliable and trustworthy. They made a difficult situation much easier to handle.',
-    rating: 5
+    quote: "A great team to work with. They are very responsive and easy to communicate with. I am very happy with the results.",
+    author: "Peter Jones",
+    company: "123 Corp.",
+    image: "https://i.pravatar.cc/150?img=3"
   }
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-5" style={{ backgroundColor: 'var(--light-blue)' }}>
+    <section id="testimonials" className="py-5 bg-light">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">What Our Clients Say</h2>
-          <p className="lead text-muted">Hear from our satisfied customers.</p>
+          <h2 className="fw-bold">Positive Comments</h2>
+          <p className="lead text-muted">Here's what our clients have to say about us.</p>
         </div>
         <div className="row">
           {testimonials.map((testimonial, index) => (
             <div className="col-lg-4 col-md-6 mb-4" key={index}>
-              <div className="card h-100 shadow-sm border-0 rounded-lg">
-                <div className="card-body p-4">
-                  <p className="card-text text-center mb-4">&quot;{testimonial.quote}&quot;</p>
-                  {/* Render star ratings */}
-                  <div className="text-center">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} style={{ color: 'gold', fontSize: '1.5rem' }}>★</span>
-                    ))}
-                  </div>
-                  <footer className="blockquote-footer text-center mt-3">{testimonial.name}</footer>
+              <div className="card h-100 text-center">
+                <div className="card-body">
+                  <img src={testimonial.image} alt={testimonial.author} className="rounded-circle mb-3" style={{width: "100px", height: "100px", objectFit: "cover"}} />
+                  <p className="card-text">"{testimonial.quote}"</p>
+                  <footer className="blockquote-footer">{testimonial.author}, <cite title="Source Title">{testimonial.company}</cite></footer>
                 </div>
               </div>
             </div>
