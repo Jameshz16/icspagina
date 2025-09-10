@@ -39,7 +39,7 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <div className="col-lg-3 col-md-6 mb-4" key={index}>
               <div className="card h-100 text-center shadow-sm">
-                <img src={member.image} alt={member.name} className="mx-auto mt-3" style={{width: "150px", height: "150px", objectFit: "cover"}}/>
+                <img src={member.image} alt={member.name} className={"mx-auto mt-3"} style={{width: "150px", height: "150px", objectFit: "cover"}}/>
                 <div className="card-body">
                   <h5 className="card-title fw-bold">{member.name}</h5>
                   <p className="card-text">{member.role}</p>
