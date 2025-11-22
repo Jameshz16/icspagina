@@ -11,28 +11,28 @@ const poolServices = [
     description: 'Premium pool surface finish that combines beauty with durability.',
     details: 'Our Diamond Brite plaster application provides a stunning, long-lasting finish that resists staining and etching while maintaining vibrant color for years to come.',
     icon: FaSwimmingPool,
-    image: '/assets/pool.jpg'
+    image: '/assets/Diamontbrite.jpg'
   },
   {
     title: 'Pool Refinishing',
     description: 'Complete pool resurfacing to restore beauty and functionality.',
     details: 'We specialize in complete pool refinishing including surface preparation, plaster removal, and application of new premium finishes.',
     icon: FaTools,
-    image: '/assets/pool.jpg'
+    image: '/assets/refinishing.jpg'
   },
   {
     title: 'Tile & Coping',
     description: 'Expert tile and coping installation for a perfect pool edge.',
     details: 'Professional tile and coping work that enhances both aesthetics and functionality while ensuring proper water drainage and edge protection.',
     icon: FaPaintBrush,
-    image: '/assets/pool.jpg'
+    image: '/assets/tilepool.jpg'
   },
   {
     title: 'Equipment Upgrades',
     description: 'Modern pool equipment for better efficiency and performance.',
     details: 'Upgrade your pool with energy-efficient pumps, advanced filtration systems, LED lighting, and smart automation controls.',
     icon: FaShieldAlt,
-    image: '/assets/pool.jpg'
+    image: '/assets/upgrade.jpg'
   }
 ];
 
