@@ -89,8 +89,8 @@ const AboutPage = () => {
                 and unwavering dedication to customer satisfaction.
               </p>
               <p className="mb-4">
-                We understand that your property is more than just a building—it's your home, 
-                your investment, and your legacy. That's why we approach every project with the 
+                We understand that your property is more than just a building—it&apos;s your home, 
+                your investment, and your legacy. That&apos;s why we approach every project with the 
                 care and attention it deserves.
               </p>
               <div className="row">
