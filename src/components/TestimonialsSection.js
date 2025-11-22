@@ -6,13 +6,13 @@ const testimonials = [
     quote: "This is a great company! They are very professional and do excellent work. I would highly recommend them to anyone.",
     author: "John Doe",
     company: "ABC Company",
-    image: "https://i.pravatar.cc/150?img=1"
+    image: "https://i.pravatar.cc/150?img=8"
   },
   {
     quote: "I was very impressed with the quality of their work. They were on time and on budget. I would definitely use them again.",
     author: "Jane Smith",
     company: "XYZ Inc.",
-    image: "https://i.pravatar.cc/150?img=2"
+    image: "https://i.pravatar.cc/150?img=5"
   },
   {
     quote: "A great team to work with. They are very responsive and easy to communicate with. I am very happy with the results.",

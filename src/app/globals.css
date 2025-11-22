@@ -1,66 +1,521 @@
+/* Custom CSS for ICS - Blue Color Scheme */
+
+/* Color System - Professional Blue Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary-blue: #273577; /* User's requested blue */
-  --light-blue: #e0f2ff; /* A lighter shade for backgrounds */
+  --primary-blue: #003366;        /* Deep corporate blue */
+  --secondary-blue: #004080;      /* Medium blue */
+  --accent-blue: #0066cc;         /* Bright blue for CTAs */
+  --light-blue: #e6f2ff;          /* Light blue background */
+  --blue-gray: #4a5568;           /* Blue-gray text */
+  --dark-blue: #002244;           /* Dark blue for headers */
+  --light-gray: #f8fafc;          /* Very light gray */
+  --medium-gray: #64748b;         /* Medium gray text */
+  --dark-gray: #1e293b;          /* Dark gray */
+  --white: #ffffff;
+  --border-light: #e2e8f0;        /* Light border */
+  --success-green: #10b981;       /* Success color */
+  --warning-amber: #f59e0b;       /* Warning color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
+/* Typography */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--blue-gray);
+  line-height: 1.6;
+  background-color: var(--white);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+  z-index: 1000;
+  height: 80px;
+  border-bottom: 1px solid var(--border-light);
 }
 
-a {
-  color: inherit;
+.navbar {
+  position: relative;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px var(--accent-blue);
+  background-color: var(--light-blue);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 51, 102, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-blue) !important;
+  font-size: 1.25rem;
+}
+
+.nav-link {
+  color: var(--blue-gray) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-blue) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* CTA Button - Blue Theme */
+.cta-button {
+  background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.cta-button:hover {
+  background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 102, 204, 0.4);
+}
+
+/* Secondary Button */
+.btn-outline-light {
+  border: 2px solid var(--white);
+  color: var(--white);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: var(--white);
+  color: var(--primary-blue);
+  border-color: var(--white);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent-blue);
+  color: var(--accent-blue);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent-blue);
+  color: var(--white);
+  border-color: var(--accent-blue);
+}
+
+/* Hero Section - Blue Theme */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.75), rgba(0, 68, 128, 0.8)), 
+              url('/assets/openpage.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero .lead {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: var(--light-blue);
+}
+
+/* Service Card Images */
+.service-image-container {
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  margin: -32px -32px 20px -32px;
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
+
+.service-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.7), rgba(0, 68, 128, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-image-overlay {
+  opacity: 1;
+}
+
+.service-content {
+  padding: 0 16px;
+}
+
+/* Service Cards - Blue Theme */
+.service-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 0 0 32px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-light);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--secondary-blue));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 20px rgba(0, 51, 102, 0.15);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  color: var(--accent-blue);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  color: var(--primary-blue);
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--dark-blue);
+}
+
+.service-description {
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.service-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+/* Section Spacing */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--secondary-blue));
+  border-radius: 2px;
+}
+
+/* CTA Section - Blue Theme */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: var(--white);
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.05) 10px,
+    rgba(255, 255, 255, 0.05) 20px
+  );
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
   }
 }
 
-/* Fade-in animation */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.cta-section h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.cta-section .lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  color: var(--light-blue);
+  position: relative;
+  z-index: 1;
 }
 
+/* Background Colors */
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.bg-primary-blue {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: var(--white);
+}
+
+.bg-accent-blue {
+  background-color: var(--accent-blue);
+  color: var(--white);
+}
+
+/* Text Colors */
+.text-primary-blue {
+  color: var(--primary-blue);
+}
+
+.text-accent-blue {
+  color: var(--accent-blue);
+}
+
+.text-blue-gray {
+  color: var(--blue-gray);
+}
+
+/* Card Enhancements */
+.card {
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 20px rgba(0, 51, 102, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Button Variations */
 .btn-primary {
-  background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #1a2556; /* A darker shade for hover */
-  border-color: #1a2556;
+  background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+  transform: translateY(-1px);
+  box-shadow: 0 8px 12px rgba(0, 102, 204, 0.4);
+}
+
+.btn-secondary {
+  background: var(--blue-gray);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--dark-gray);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero .lead {
+    font-size: 1.1rem;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    padding: 24px;
+  }
+  
+  /* Mobile Menu Fixes */
+  .navbar-collapse {
+    background: var(--white);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .cta-button {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.cta-button:focus,
+.nav-link:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

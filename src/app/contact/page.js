@@ -23,7 +23,7 @@ const ContactPage = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="phone" className="form-label">Phone Number</label>
-                  <input type="tel" className="form-control" id="phone" placeholder="(123) 456-7890" />
+                  <input type="tel" className="form-control" id="phone" placeholder="(561) 913-8055" />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="message" className="form-label">Message</label>
@@ -50,9 +50,9 @@ const ContactPage = () => {
           <div className="row mt-5">
             <div className="col-md-6 text-center">
               <p className="fw-bold">Phone:</p>
-              <p>(123) 456-7890</p>
+              <p>(561) 913-8055</p>
               <p className="fw-bold">Email:</p>
-              <p>info@innovativerestoration.com</p>
+              <p>chett@innovativecustomservices.com</p>
             </div>
             <div className="col-md-6 text-center">
               <p className="fw-bold">Our Office:</p>

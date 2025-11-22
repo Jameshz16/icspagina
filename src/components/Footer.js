@@ -25,6 +25,7 @@ const Footer = () => {
               <li className="nav-item mb-2"><Link href="/" className="nav-link p-0 text-white">Home</Link></li>
               <li className="nav-item mb-2"><Link href="/about" className="nav-link p-0 text-white">About</Link></li>
               <li className="nav-item mb-2"><Link href="/services" className="nav-link p-0 text-white">Services</Link></li>
+              <li className="nav-item mb-2"><Link href="/pools" className="nav-link p-0 text-white">Pools</Link></li>
               <li className="nav-item mb-2"><Link href="/projects" className="nav-link p-0 text-white">Projects</Link></li>
               <li className="nav-item mb-2"><Link href="/contact" className="nav-link p-0 text-white">Contact</Link></li>
             </ul>
@@ -36,8 +37,8 @@ const Footer = () => {
             <ul className="nav flex-column">
               <li className="nav-item mb-2"><span className="p-0 text-white">21218 St Andrews Blvd # 727
 Boca Raton, FL 33433</span></li>
-              <li className="nav-item mb-2"><span className="p-0 text-white">Phone: 1-800-1234-567</span></li>
-              <li className="nav-item mb-2"><span className="p-0 text-white">Email: info@demolink.org</span></li>
+              <li className="nav-item mb-2"><span className="p-0 text-white">Phone: (561) 913-8055</span></li>
+              <li className="nav-item mb-2"><span className="p-0 text-white">Email: chett@innovativecustomservices.com</span></li>
             </ul>
           </div>
 
