@@ -4,8 +4,8 @@ import styles from './ProjectsSection.module.css';
 
 const projects = [
   {
-    title: 'Concrete Work',
-    image: '/assets/concrete.jpg'
+    title: 'Construction Pool',
+    image: '/assets/proyectpool/06.jpg'
   },
   {
     title: 'Painting Services',
