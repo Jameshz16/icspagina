@@ -1,3 +1,5 @@
+export const dynamic = 'force-static'
+
 export default function sitemap() {
   const baseUrl = 'https://www.innovativecustomservices.com'; // Update this with your actual domain
 
