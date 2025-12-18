@@ -1,0 +1,82 @@
+.teamSection {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.teamCard {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+}
+
+.teamImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  transform: scale(1.1); /* Slight default zoom */
+}
+
+.teamCard:hover .teamImage {
+  transform: scale(
+    1
+  ); /* Zoom out on hover or zoom in more? Let's do zoom in more for 'alive' feel */
+  transform: scale(1.2);
+}
+
+.cardBody {
+  padding: 2rem;
+  text-align: center;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.role {
+  color: #d63384; /* Use the accent color or similar */
+  color: var(--bs-primary, #0d6efd);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover .socialLinks {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -5,13 +5,13 @@ const teamMembers = [
   {
     name: 'Chett Cockrill',
     role: 'Owner',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: '/assets/Chet.jpeg',
     bio: 'Chett is the visionary leader of our company, with over 20 years of experience in the construction industry. His strategic insights drive our success.'
   },
   {
     name: 'Alex Cockrill',
     role: 'Superintendent',
-    image: 'https://randomuser.me/api/portraits/men/44.jpg',
+    image: '/assets/Alex.jpeg',
     bio: 'Alex ensures that every project is executed flawlessly on-site. His meticulous attention to detail guarantees quality and efficiency.'
   },
   {
@@ -25,28 +25,44 @@ const teamMembers = [
     role: 'Managging Member',
     image: 'https://randomuser.me/api/portraits/men/60.jpg',
     bio: 'Vincent is instrumental in managing our operational excellence and fostering strong client relationships. He ensures smooth business processes.'
+  },
+  {
+    name: 'Josh Flores',
+    role: 'Sr Construction Superintendent',
+    image: '/assets/josh.jpeg',
+    bio: 'As Senior Construction Superintendent, Josh oversees site operations with a focus on quality control, safety compliance, and efficient project delivery.'
   }
 ];
+ 
+import styles from './TeamSection.module.css';
+
+// ... (teamMembers array remains unchanged, not including it here to correspond to StartLine where component starts)
 
 const TeamSection = () => {
   return (
-    <section id="team" className="py-5 bg-light">
-      <div className="container-fluid px-4">
+    <section id="team" className={styles.teamSection}>
+      <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Executive managers</h2>
-          <p className="lead text-muted">Our team of experts is ready to help you with your project.</p>
+          <h2 className="fw-bold display-5">Executive Managers</h2>
+          <p className="lead text-muted">Our expert team driving excellence in every project.</p>
         </div>
-        <div className="row">
+        <div className="row justify-content-center g-4">
           {teamMembers.map((member, index) => (
-            <div className="col-lg-3 col-md-6 mb-4" key={index}>
-              <div className="card h-100 shadow-sm">
-                <div style={{ width: '100%', height: '250px', position: 'relative' }}>
-                  <Image src={member.image} alt={member.name} layout="fill" objectFit="cover" />
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div className={styles.teamCard}>
+                <div className={styles.imageContainer}>
+                  <Image 
+                    src={member.image} 
+                    alt={member.name} 
+                    fill 
+                    className={styles.teamImage}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
-                <div className="card-body text-center">
-                  <h5 className="card-title fw-bold">{member.name}</h5>
-                  <p className="card-text">{member.role}</p>
-                  <p className="card-text small">{member.bio}</p> {/* Added biography */}
+                <div className={styles.cardBody}>
+                  <h5 className={styles.name}>{member.name}</h5>
+                  <p className={styles.role}>{member.role}</p>
+                  <p className={styles.bio}>{member.bio}</p>
                 </div>
               </div>
             </div>

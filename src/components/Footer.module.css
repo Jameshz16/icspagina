@@ -1,0 +1,110 @@
+.footer {
+  background-color: var(--dark-blue, #002244);
+  color: white;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+.description {
+  color: #a0aec0;
+  margin-bottom: 2rem;
+  max-width: 300px;
+}
+
+.heading {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-blue, #3b82f6);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkItem {
+  margin-bottom: 0.8rem;
+}
+
+.link {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover {
+  color: var(--accent-blue, #3b82f6);
+  transform: translateX(5px);
+}
+
+.contactInfo {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  color: #cbd5e0;
+}
+
+.contactIcon {
+  margin-right: 10px;
+  color: var(--accent-blue, #3b82f6);
+  margin-top: 4px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socialIconLink {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialIconLink:hover {
+  background-color: var(--accent-blue, #3b82f6);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 4rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: #718096;
+  font-size: 0.875rem;
+}

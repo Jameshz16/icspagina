@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
+import styles from './TestimonialsSection.module.css';
+
 const testimonials = [
   {
     quote: "This is a great company! They are very professional and do excellent work. I would highly recommend them to anyone.",
@@ -24,20 +26,29 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-5 bg-light">
+    <section id="testimonials" className={styles.testimonialsSection}>
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Positive Comments</h2>
-          <p className="lead text-muted">Here&apos;s what our clients have to say about us.</p>
+          <h2 className="fw-bold display-5">Client Testimonials</h2>
+          <p className="lead text-muted">Hear from our satisfied clients about their experience.</p>
         </div>
-        <div className="row">
+        <div className="row g-4 justify-content-center">
           {testimonials.map((testimonial, index) => (
-            <div className="col-lg-4 col-md-6 mb-4" key={index}>
-              <div className="card h-100 text-center">
-                <div className="card-body">
-                  <Image src={testimonial.image} alt={testimonial.author} width={100} height={100} className="rounded-circle mb-3" style={{objectFit: "cover"}} />
-                  <p className="card-text">&quot;{testimonial.quote}&quot;</p>
-                  <footer className="blockquote-footer">{testimonial.author}, <cite title="Source Title">{testimonial.company}</cite></footer>
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div className={styles.card}>
+                <div className={styles.imageWrapper}>
+                  <Image 
+                    src={testimonial.image} 
+                    alt={testimonial.author} 
+                    fill
+                    className={styles.avatar}
+                  />
+                </div>
+                <div className={styles.quoteIcon}>❝</div>
+                <p className={styles.quote}>"{testimonial.quote}"</p>
+                <div>
+                  <h5 className={styles.author}>{testimonial.author}</h5>
+                  <p className={styles.company}>{testimonial.company}</p>
                 </div>
               </div>
             </div>

@@ -1,61 +1,83 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-white mt-5 p-4">
+    <footer className={styles.footer}>
       <div className="container">
-        <div className="row">
-          {/* Column 1: Logo and Description */}
-          <div className="col-md-3 mb-4">
-            <Link href="/" className="d-flex align-items-center mb-3 text-white text-decoration-none">
-              <Image src="/assets/logo.png" alt="Constructo Logo" width={40} height={40} style={{ marginRight: '10px' }} />
-              <strong>Innovative Custom Services</strong>
+        <div className="row gy-5">
+          {/* Brand Column */}
+          <div className="col-lg-4 col-md-6">
+            <Link href="/" className="d-flex align-items-center text-decoration-none mb-3">
+              <Image src="/assets/logo.png" alt="ICS Logo" width={50} height={50} className="me-3" />
+              <span className="fw-bold fs-4 text-white">ICS</span>
             </Link>
-            <p className="text-white">Your trusted partner for construction services.</p>
+            <p className={styles.description}>
+              Innovative Custom Services. delivering excellence in restoration, construction, and pool services across South Florida. Licensed & Insured.
+            </p>
+            <div className={styles.socialIcons}>
+              <a href="#" className={styles.socialIconLink} aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+              <a href="#" className={styles.socialIconLink} aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+              <a href="#" className={styles.socialIconLink} aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+            </div>
           </div>
 
-          {/* Column 2: Menu Links */}
-          <div className="col-md-3 mb-4">
-            <h5>Quick Links</h5>
-            <ul className="nav flex-column">
-              <li className="nav-item mb-2"><Link href="/" className="nav-link p-0 text-white">Home</Link></li>
-              <li className="nav-item mb-2"><Link href="/about" className="nav-link p-0 text-white">About</Link></li>
-              <li className="nav-item mb-2"><Link href="/services" className="nav-link p-0 text-white">Services</Link></li>
-              <li className="nav-item mb-2"><Link href="/pools" className="nav-link p-0 text-white">Pools</Link></li>
-              <li className="nav-item mb-2"><Link href="/projects" className="nav-link p-0 text-white">Projects</Link></li>
-              <li className="nav-item mb-2"><Link href="/contact" className="nav-link p-0 text-white">Contact</Link></li>
+          {/* Quick Links */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className={styles.heading}>Quick Links</h5>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}><Link href="/" className={styles.link}>Home</Link></li>
+              <li className={styles.linkItem}><Link href="/about" className={styles.link}>About Us</Link></li>
+              <li className={styles.linkItem}><Link href="/services" className={styles.link}>Services</Link></li>
+              <li className={styles.linkItem}><Link href="/projects" className={styles.link}>Projects</Link></li>
             </ul>
           </div>
 
-          {/* Column 3: Contact Information */}
-          <div className="col-md-3 mb-4">
-            <h5>Contact Us</h5>
-            <ul className="nav flex-column">
-              <li className="nav-item mb-2"><span className="p-0 text-white">21218 St Andrews Blvd # 727
-Boca Raton, FL 33433</span></li>
-              <li className="nav-item mb-2"><span className="p-0 text-white">Phone: (561) 913-8055</span></li>
-              <li className="nav-item mb-2"><span className="p-0 text-white">Email: chett@innovativecustomservices.com</span></li>
+          {/* Services */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className={styles.heading}>Services</h5>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}><Link href="/services" className={styles.link}>Concrete Restoration</Link></li>
+              <li className={styles.linkItem}><Link href="/pools" className={styles.link}>Custom Pools</Link></li>
+              <li className={styles.linkItem}><Link href="/services" className={styles.link}>Waterproofing</Link></li>
+              <li className={styles.linkItem}><Link href="/services" className={styles.link}>Painting</Link></li>
             </ul>
           </div>
 
-          {/* Column 4: Social Media */}
-          <div className="col-md-3 mb-4">
-            <h5>Follow Us</h5>
-            <div>
-              {/* TODO: Add bootstrap icons CDN to layout.js */}
-              <a href="#" className="text-white me-3"><i className="bi bi-facebook" style={{ fontSize: '1.5rem' }}></i></a>
-              <a href="#" className="text-white me-3"><i className="bi bi-twitter" style={{ fontSize: '1.5rem' }}></i></a>
-              <a href="#" className="text-white me-3"><i className="bi bi-instagram" style={{ fontSize: '1.5rem' }}></i></a>
-              <a href="#" className="text-white"><i className="bi bi-linkedin" style={{ fontSize: '1.5rem' }}></i></a>
+          {/* Contact Info */}
+          <div className="col-lg-4 col-md-6">
+            <h5 className={styles.heading}>Contact Us</h5>
+            <div className={styles.contactInfo}>
+              <i className={`bi bi-geo-alt-fill ${styles.contactIcon}`}></i>
+              <div>
+                21218 St Andrews Blvd # 727<br />
+                Boca Raton, FL 33433
+              </div>
+            </div>
+            <div className={styles.contactInfo}>
+              <i className={`bi bi-telephone-fill ${styles.contactIcon}`}></i>
+              <div>(561) 913-8055</div>
+            </div>
+            <div className={styles.contactInfo}>
+              <i className={`bi bi-envelope-fill ${styles.contactIcon}`}></i>
+              <div>chett@innovativecustomservices.com</div>
             </div>
           </div>
         </div>
-        <div className="text-center mt-4 border-top pt-3">
-          <p>&copy; {currentYear} Constructo. All Rights Reserved.</p>
+
+        <div className={styles.copyright}>
+          <div className="row align-items-center">
+            <div className="col-md-6 text-center text-md-start">
+              &copy; {currentYear} Innovative Custom Services. All Rights Reserved.
+            </div>
+            <div className="col-md-6 text-center text-md-end mt-3 mt-md-0">
+              <span className="small">CBC #1250136</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

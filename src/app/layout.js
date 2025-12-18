@@ -8,13 +8,29 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Expert Restoration & Luxury Custom Pools | ICS",
-  description: "Professional restoration and custom pool services in Boca Raton, Florida. Licensed Contractor CBC #1250136. Expert concrete restoration, pool construction, and Diamond Brite finishes.",
-  keywords: "restoration, pools, contractor, Boca Raton, Florida, concrete restoration, pool construction, Diamond Brite",
+  title: "ICS | Expert Restoration & Luxury Custom Pools in Boca Raton",
+  description:
+    "Premier licensed contractor (CBC #1250136) in Boca Raton, FL. Specializing in concrete restoration, Diamond Brite pool finishes, custom pool construction, and structural repairs.",
+  keywords:
+    "concrete restoration, pool construction, pool resurfacing, Diamond Brite, waterproofing, structural repair, Boca Raton, Florida, licensed contractor, ICS, Innovative Custom Services, custom pools, pool renovation",
   openGraph: {
-    title: "Expert Restoration & Luxury Custom Pools | ICS",
-    description: "Professional restoration and custom pool services in Boca Raton, Florida.",
+    title: "ICS | Expert Restoration & Luxury Custom Pools",
+    description:
+      "Your trusted partner for professional concrete restoration and luxury pool creation in South Florida. Licensed & Insured.",
     type: "website",
+    locale: "en_US",
+    siteName: "Innovative Custom Services",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -24,12 +40,12 @@ import BootstrapClient from "@/components/BootstrapClient";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
       </head>
       <body className={`${inter.variable}`}>
         <Header />

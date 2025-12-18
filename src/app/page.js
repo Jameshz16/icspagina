@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ServicesSection from '@/components/ServicesSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -78,11 +79,20 @@ const AboutSection = () => {
           </div>
           <div className="col-lg-6">
             <div style={{
-              background: 'url(/assets/concrete.jpg) center/cover',
+              position: 'relative',
               height: '400px',
               borderRadius: '12px',
+              overflow: 'hidden',
               boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
-            }} />
+            }}>
+              <Image
+                src="/assets/concrete.jpg"
+                alt="Professional concrete restoration in progress"
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -155,11 +165,19 @@ const PoolsSection = () => {
           </div>
           <div className="col-lg-6">
             <div style={{
-              background: 'url(/assets/pool.jpg) center/cover',
+              position: 'relative',
               height: '350px',
               borderRadius: '12px',
+              overflow: 'hidden',
               boxShadow: '0 12px 20px rgba(0,0,0,0.1)'
-            }} />
+            }}>
+              <Image
+                src="/assets/pool.jpg"
+                alt="Luxury custom pool with Diamond Brite finish"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
           </div>
         </div>
       </div>

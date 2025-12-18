@@ -36,11 +36,14 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--white);
-  box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 51, 102, 0.08);
   z-index: 1000;
   height: 80px;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  transition: all 0.3s ease;
 }
 
 .navbar {

@@ -4,34 +4,48 @@ import styles from './ProjectsSection.module.css';
 
 const projects = [
   {
-    title: 'Construction Pool',
+    title: 'Custom Pool Construction',
+    category: 'Pools',
     image: '/assets/proyectpool/06.jpg'
   },
   {
-    title: 'Painting Services',
+    title: 'Commercial Painting',
+    category: 'Painting',
     image: '/assets/painting.jpg'
   },
   {
-    title: 'Shell Construction',
+    title: 'Structural Shell Tech',
+    category: 'Construction',
     image: '/assets/Shell-Construction.jpg'
   }
 ];
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-5">
+    <section id="projects" className={styles.projectSection}>
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Our Projects</h2>
-          <p className="lead text-muted">Here are some of our recent projects.</p>
+          <h2 className="fw-bold display-5">Featured Projects</h2>
+          <p className="lead text-muted">Showcasing our excellence in construction and renovation.</p>
         </div>
-        <div className="row">
+        <div className="row g-4">
           {projects.map((project, index) => (
-            <div className="col-lg-4 col-md-6 mb-4" key={index}>
-              <div className={`card h-100 text-center shadow-sm ${styles.projectCard}`}>
-                <Image src={project.image} className="card-img-top" alt={project.title} width={500} height={200} style={{objectFit: "cover"}}/>
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">{project.title}</h5>
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div className={styles.projectCard}>
+                <div className={styles.imageContainer}>
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    className={styles.projectImage}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className={styles.overlay}>
+                  <div className={styles.projectContent}>
+                    <p className={styles.category}>{project.category}</p>
+                    <h3 className={styles.title}>{project.title}</h3>
+                  </div>
                 </div>
               </div>
             </div>
