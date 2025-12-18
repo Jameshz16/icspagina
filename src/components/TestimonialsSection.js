@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <div className={styles.quoteIcon}>❝</div>
-                <p className={styles.quote}>"{testimonial.quote}"</p>
+                <p className={styles.quote}>&quot;{testimonial.quote}&quot;</p>
                 <div>
                   <h5 className={styles.author}>{testimonial.author}</h5>
                   <p className={styles.company}>{testimonial.company}</p>
